@@ -5,7 +5,7 @@
             <div class="line" v-for="(line, lineIndex) in board" :key=lineIndex>
                 <div class="cell"
                      v-for="(cell, columnIndex) in line" :key="columnIndex"
-                     @click="line[columnIndex]= !line[columnIndex]"
+                     @click="$set(line, columnIndex, !line[columnIndex])"
                      :class="{active : line[columnIndex]}">
                 </div>
             </div>
