@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/views/HomePage'
+import GameBoard from '@/views/GameBoard'
+import Profile from "./views/Profile";
 
 Vue.use(Router)
 
@@ -8,12 +9,13 @@ export default new Router({
     mode: 'history',
     routes: [
         {
-            path: '/',
-            component: Home
+            path: '/profile',
+            component: Profile
         },
         {
-            path: '/list',
-            component: () => import('./views/ListPage.vue')
+            path: '/game',
+            component: GameBoard
         }
+
     ]
 })
